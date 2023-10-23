@@ -8,10 +8,11 @@ public class CollegeManagement {
     private boolean isOpen;
     List<Department> departments;
      List<Classroom> classrooms;
+
+     List<Parking> parkings;
+     List<Hostel> hostels;
     private  Hostel hostel;
-    private List<Parking> parkings;
-    private List<Hostel> hostels;
-    private Auditorium auditorium;
+     List<Auditorium> auditoriums;
 
     public CollegeManagement() {
         this.hostels = new ArrayList<>();
@@ -30,7 +31,10 @@ public class CollegeManagement {
     }
 
     public void manageHostels() {
-        // TODO: Implement this method to manage the hostels of the college.
+        System.out.println("List of all hostels:");
+        for(Hostel hostel1 : hostels){
+            System.out.println(hostel);
+        }
     }
 
 
@@ -47,18 +51,20 @@ public class CollegeManagement {
     }
 
     public void manageParking() {
-        // TODO: Implement this method to manage the parking area of the college.
-    }
-    public Auditorium getAuditorium() {
-        return auditorium;
+        System.out.println("List of all parking:");
+        for(Parking parking : parkings){
+            System.out.println(parking);
+        }    }
+    public List<Auditorium> getAuditorium() {
+        return auditoriums;
     }
 
-    public void setAuditorium(Auditorium auditorium) {
-        this.auditorium = auditorium;
+    public void setAuditorium(List<Auditorium> auditorium) {
+        this.auditoriums = auditorium;
     }
 
     public void manageAuditorium() {
-        // TODO: Implement this method to manage the auditorium of the college.
+
     }
     public CollegeManagement(String collegeName , String city, String contactNumber, Hostel hostel) {
         this.collegeName  = collegeName ;
@@ -67,8 +73,9 @@ public class CollegeManagement {
         this.isOpen = true;
         this.departments = new ArrayList<>();
         this.classrooms = new ArrayList<>();
+        this.parkings = new ArrayList<>();
         this.hostel = hostel;
-        this.auditorium = null;
+        this.auditoriums = null;
     }
 
     public String getName() {

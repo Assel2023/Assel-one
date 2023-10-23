@@ -11,6 +11,7 @@ public class Auditorium {
     private Time time;
     private int totalSeats;
     private int departmentId;
+     boolean isAvailable;
 
     public Auditorium(String auditoriumName, List<String> eventsList, Date date, Time time, int totalSeats, int departmentId) {
         this.auditoriumName = auditoriumName;
@@ -19,6 +20,7 @@ public class Auditorium {
         this.time = time;
         this.totalSeats = totalSeats;
         this.departmentId = departmentId;
+        this.isAvailable = true;
     }
 
     public String getAuditoriumName() {
@@ -69,7 +71,11 @@ public class Auditorium {
         this.departmentId = departmentId;
     }
 
-    public void bookEvent() {
-        // TODO: Implement this method to book the auditorium for conducting the events.
-    }
+    public void bookEvent(String event, Date startDate, Date endDate) {
+        if (isAvailable) {
+            isAvailable = false;
+            System.out.println("The auditorium has been booked for the event '" + event + "' from " + startDate + " to " + endDate);
+        } else {
+            System.out.println("The auditorium is not available for the requested dates.");
+        }    }
 }

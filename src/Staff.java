@@ -3,6 +3,8 @@ public class Staff {
     private String staffName;
     private int departmentId;
     private double salary;
+    private boolean hasPaidFees ;
+    private boolean isPresent ;
 
     public Staff(int staffId, String staffName, int departmentId, double salary) {
         this.staffId = staffId;
@@ -51,11 +53,9 @@ public class Staff {
     }
 
     public void PayFees() {
-        // TODO: Implement this method to pay the fees of the staff.
-    }
+        this.hasPaidFees = true;     }
 
     public boolean IsPresent() {
-        // TODO: Implement this method to check if the staff is present to the college on a particular date.
-        return true;
+        return this.isPresent;
     }
 }

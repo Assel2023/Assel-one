@@ -7,12 +7,17 @@ public class Student {
         private String gender;
         private int year;
         private int classId;
-//        private Staff staff;
+        private boolean hasPaidFees ;
+        private boolean isPresent ;
+
+
+    //        private Staff staff;
         List<Staff> Staff;
-        private Classroom classroom;
-        private Canteen Canteen;
-        private Library library;
-        private Bus bus;
+         Classroom classroom;
+         Canteen Canteen;
+         Library library;
+         Bus bus;
+        Auditorium auditorium;
 
 
     public Student(int studentId, String studentName, String gender, int year, int classId) {
@@ -78,12 +83,10 @@ public class Student {
         }
 
         public void PayFees() {
-            // TODO: Implement this method to pay the fees of the student.
-        }
+            this.hasPaidFees = true;        }
 
         public boolean IsPresent() {
-            // TODO: Implement this method to check if the student is present to the college on a particular date.
-            return true;
+            return this.isPresent;
         }
     }
 

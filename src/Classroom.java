@@ -2,6 +2,8 @@ public class Classroom {
     private int classId;
     private String section;
     private int departmentId;
+     boolean isOccupied;
+
 
     public Classroom(int classId, String section, int departmentId) {
         this.classId = classId;
@@ -40,7 +42,6 @@ public class Classroom {
     }
 
     public boolean isOccupied() {
-        // TODO: Implement this method to check whether the classroom is occupied or not.
-        return false;
+        return this.isOccupied;
     }
 }
